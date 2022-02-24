@@ -4,19 +4,18 @@
 - All file paths are relative to your `ManiaKV/userdata` folder.
 - DO NOT add scope symbols to the beginning of file paths. (i.e. `./`, `/`, `~/`)
 
-## Properties
-- ## `schemaVersion: string` - Optional
+## `schemaVersion: string` - Optional
     - Uses semantic versioning
     - Example: `1.0`
     - Please note that as of right now this doesn't do anything :P
 
-- ## `language: string` - Optional
+## `language: string` - Optional
     - Version: `^0.1.1`
     - Language being used
     - Example: `en-US` or `*en-US`
     - Go [here](/config/languages) to find out how this works
 
-- ## `window: object`
+## `window: object`
     - ### `width: number` - Optional
         - Window width in pixels
         - Default: `1189`
@@ -37,7 +36,7 @@
         - If set to true, window decorations will be removed from the application (i.e. Frame, Buttons, etc.)
         - Default: `false`
 
-- ## `stages: object[]` - Required
+## `stages: object[]` - Required
     - Array of items with type object
     - ### `id: string` - Required
         - Stage identifier
@@ -64,7 +63,7 @@
         - Path to table image
         - Example: `table.png` - [IMPORTANT](/config/properties#-important---do-not-add--or--to-the-beginning-of-file-paths)
 
-- ## `characters: object[]` - Required
+## `characters: object[]` - Required
     - ### `id: string` - Required
         - Character identifier
         - Example: `my-character-1`
