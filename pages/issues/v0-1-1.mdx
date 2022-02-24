@@ -1,0 +1,18 @@
+# v0.1.1 Issues
+
+## Application crashes after a fresh install
+A bug in this version prevents ManiaKV from adding the `stage` property to its states file by default. This means you'll have to add it manually. (You should only have to do this once unless you do another fresh install)
+
+Firstly, head over to the default install location of ManiaKV (`C:\Users\<yourName>\AppData\Local\Programs\ManiaKV`) or the location you chose to install it to, you should find a file in the `userdata` folder called `states.json`.
+
+Next, open it with a text editor of your choice (Notepad, VSCode, etc.), then add a property called `stage` and set its value to "4k" (Or an ID of any stage defined inside of `config.json`).
+
+Your file should look something like this afterwards:
+```json
+{
+    "init": 1,
+    "stage": "4k"
+}
+```
+
+Finally save the file and launch ManiaKV. It should now open without any issues.

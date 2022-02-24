@@ -1,0 +1,103 @@
+# Properties
+
+### 🟥 *IMPORTANT*:
+  - All file paths are local to your `ManiaKV/userdata` folder.
+  - DO NOT add scope symbols to the beginning of file paths. (i.e. `./`, `/`, `~/`)
+
+## Table of Contents
+- ### [schemaVersion](/config/properties#schemaVersion-string---optional) - string
+
+- ### [language](/config/properties#language-string---optional) - string
+
+- ### [window](/config/properties#window-object---optional) - object
+    - [width](/config/properties#width-number---optional) - number
+    - [height](/config/properties#height-number---optional) - number
+    - [alwaysOntop](/config/properties#alwaysOntop-bool---optional) - bool
+    - [transparent](/config/properties#transparent-bool---optional) - bool
+    - [undecorated](/config/properties#undecorated-bool---optional) - bool
+
+- ### [stages](/config/properties#stages-object---required) - object[]
+    - [id](/config/properties#id-string---required) - string
+    - [keys](/config/properties#keys-string---required) - string[]
+    - [characters](/config/properties#characters-string---required) - string[]
+    - [shortcut](/config/properties#shortcut-string---optional) - string[]
+    - [background](/config/properties#background-string---required) - string
+    - [table](/config/properties#table-string---required) - string
+
+- ### [characters](/config/properties#characters-object---required) - object[]
+    - [id](/config/properties#id-string---required-1) - string
+    - [keys](/config/properties#keys-number---required) - number
+    - [textures](/config/properties#textures-object---required) - object
+
+## Properties
+- ## `schemaVersion: string` - Optional
+    - Uses semantic versioning
+    - Example: `1.0`
+    - Please note that as of right now this doesn't do anything :P
+
+- ## `language: string` - Optional
+    - Version: `^0.1.1`
+    - Language being used
+    - Example: `en-US` or `*en-US`
+    - Go [here](/config/languages) to find out how this works
+
+- ## `window: object`
+    - ### `width: number` - Optional
+        - Window width in pixels
+        - Default: `1189`
+
+    - ### `height: number` - Optional
+        - Window height in pixels
+        - Default: `669`
+
+    - ### `alwaysOntop: bool` - Optional
+        - If set to true, the window will stay on top of all other windows
+        - Default: `false`
+
+    - ### `transparent: bool` - Optional
+        - If set to true, the window body will be transparent
+        - Default: `false`
+
+    - ### `undecorated: bool` - Optional
+        - If set to true, window decorations will be removed from the application (i.e. Frame, Buttons, etc.)
+        - Default: `false`
+
+- ## `stages: object[]` - Required
+    - Array of items with type object
+    - ### `id: string` - Required
+        - Stage identifier
+        - Example: `my-stage-1`
+    
+    - ### `keys: string[]` - Required
+        - Array of keycodes
+        - Go [here](/config/keycodes) to see how this works
+
+    - ### `characters: string[]` - Required
+        - Array of character ID's
+        - Go [here](/config/characters) to see how this works
+
+    - ### `shortcut: string[]` - Optional
+        - Defines the keyboard shortcut used to access this stage
+        - Array of keycodes
+        - Go [here](/config/keycodes) to see how this works
+
+    - ### `background: string` - Required
+        - Path to background image
+        - Example: `background.png` - [IMPORTANT](/config/properties#-important---do-not-add--or--to-the-beginning-of-file-paths)
+
+    - ### `table: string` - Required
+        - Path to table image
+        - Example: `table.png` - [IMPORTANT](/config/properties#-important---do-not-add--or--to-the-beginning-of-file-paths)
+
+- ## `characters: object[]` - Required
+    - ### `id: string` - Required
+        - Character identifier
+        - Example: `my-character-1`
+
+    - ### `keys: number` - Required
+        - Amount of keys this character has
+        - Example: `4`
+
+    - ### `textures: object` - Required
+        - Paths to textures
+        - Go [here](/config/characters) to see how this works
