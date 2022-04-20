@@ -19,11 +19,16 @@ import Callout from 'nextra-theme-docs/callout'
     - Go [here](/config/languages) to find out how this works
 
 ## `window: object`
-    - ### `width: number` - Optional
+    - ### `title: string` - Optional
+        - Implementation: `^0.2.0`
+        - Window title
+        - Default: `ManiaKV`
+
+    - ### `width: int` - Optional
         - Window width in pixels
         - Default: `1189`
 
-    - ### `height: number` - Optional
+    - ### `height: int` - Optional
         - Window height in pixels
         - Default: `669`
 
@@ -38,6 +43,14 @@ import Callout from 'nextra-theme-docs/callout'
     - ### `undecorated: bool` - Optional
         - If set to true, window decorations will be removed from the application (i.e. Frame, Buttons, etc.)
         - Default: `false`
+    
+    - ### `x: int` - Optional
+        - Implementation: `^0.2.0`
+        - Starting X position of window
+    
+    - ### `y: int` - Optional
+        - Implementation: `^0.2.0`
+        - Starting Y position of window
 
 ## `stages: object[]` - Required
     - Array of items with type object
@@ -67,11 +80,15 @@ import Callout from 'nextra-theme-docs/callout'
         - Example: `table.png` - [IMPORTANT](/config/properties#-important---do-not-add--or--to-the-beginning-of-file-paths)
 
 ## `characters: object[]` - Required
+    - ### `type: "keyboard" | "pointer"` - Required
+        - Implementation: `^0.2.0`
+        - Character type
+
     - ### `id: string` - Required
         - Character identifier
         - Example: `my-character-1`
 
-    - ### `keys: number` - Required
+    - ### `keys: int` - Required
         - Amount of keys this character has
         - Example: `4`
 
